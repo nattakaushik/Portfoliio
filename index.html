@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaushik Natta | Growth & GTM Operations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-main': '#0a0a0a',
+                        'text-main': '#ffffff',
+                        'accent': '#3b82f6', // Premium Blue
+                        'accent-glow': 'rgba(59, 130, 246, 0.5)'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            cursor: none;
+            /* Hide default cursor for custom one */
+        }
+
+        .cursor-dot,
+        .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            transition: transform 0.2s;
+        }
+
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
+        }
+
+        /* Reveal effects */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* 3D Transform Utils */
+        .transform-style-3d {
+            transform-style: preserve-3d;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 left-0 p-6 mix-blend-difference">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter hover:text-gray-300 transition-colors">KN.</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-gray-400">
+                <a href="#work" class="hover:text-white transition-colors">Work</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <a href="mailto:nattakaushik@gmail.com" class="md:hidden text-sm uppercase">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-[60vh] flex flex-col justify-center items-center px-6 relative pt-32 pb-32">
+        <div class="text-center z-10 animate-fade-in">
+            <h2 class="text-sm md:text-base text-gray-400 uppercase tracking-[0.3em] mb-4">GTM | FRACTIONAL CMO</h2>
+            <h1 class="text-6xl md:text-9xl font-bold tracking-tighter mb-6 leading-none whitespace-nowrap">
+                KAUSHIK <span class="ml-4"></span>NATTA</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-2xl leading-relaxed mb-10 font-light">
+                Scaling SaaS & Web3 products from zero to one. <br>
+                <span class="text-white">Expert in Automation, Funnels & Strategic Partnerships.</span>
+            </p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="#work"
+                    class="tilt-card px-8 py-3 border border-white/20 hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm relative overflow-hidden">
+                    <span class="relative z-10">View Work</span>
+                    <div
+                        class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/kaushik-natta-979112212/" target="_blank"
+                    class="tilt-card px-8 py-3 border border-white/20 hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm relative overflow-hidden">
+                    <span class="relative z-10">LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="work" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-sm text-gray-500 uppercase tracking-[0.25em] mb-12 reveal">Selected Work</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Project 1: Crop.photo -->
+            <div class="group relative reveal tilt-card transition-transform duration-100 ease-out">
+                <!-- 3D Button-like Card Container -->
+                <!-- Updated Background to match screenshot (Peach/White/Blueish) -->
+                <div
+                    class="relative bg-gradient-to-br from-[#ffd8be] via-[#ffe4e6] to-[#eff6ff] border border-white/10 mb-6 rounded-3xl shadow-[0_20px_40px_-15px_rgba(255,255,255,0.1)] group-hover:shadow-[0_30px_60px_-15px_rgba(255,255,255,0.2)] transition-all duration-300 overflow-hidden transform-style-3d">
+                    <!-- Inset Shadow for depth -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent pointer-events-none">
+                    </div>
+
+                    <div class="aspect-[4/3] flex items-center justify-center p-12">
+                        <!-- Crop.photo Logo -->
+                        <img src="crop-logo.svg" alt="Crop.photo Logo"
+                            class="object-contain w-64 h-auto drop-shadow-xl group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-start px-2">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Crop.photo <span class="text-white/60 font-medium text-lg">-
+                                San Jose</span></h3>
+                        <p class="text-gray-300 text-sm mb-4 leading-relaxed">
+                            Shopify App Launch: <strong>Activated 100k+ ICP leads</strong>, led GTM across email &
+                            video, and built end-to-end HubSpot automation.
+                        </p>
+                        <ul class="flex gap-3 text-xs text-gray-500 uppercase tracking-wider mb-4">
+                            <li>Strategy</li>
+                            <li>Launch</li>
+                            <li>Automation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2 px-2">
+                    <a href="https://www.crop.photo/blog/ai-content-aware-image-editing-api-for-shopify-and-ecommerce"
+                        target="_blank"
+                        class="inline-flex items-center text-sm hover:underline decoration-1 underline-offset-4">
+                        Read Blog Post <span class="ml-2">→</span>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=PK7k_9u2b5I" target="_blank"
+                        class="inline-flex items-center text-sm hover:underline decoration-1 underline-offset-4">
+                        Watch Launch Video <span class="ml-2">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: Push Protocol -->
+            <!-- Wrapped entire card in anchor tag as requested -->
+            <a href="https://miro.com/app/board/uXjVLOBo4tE=/?share_link_id=222487136931" target="_blank"
+                class="block group relative reveal tilt-card transition-transform duration-100 ease-out transition-delay-200">
+                <!-- 3D Button-like Card Container -->
+                <div
+                    class="relative bg-gradient-to-br from-black via-[#0f0518] to-[#3b0764] border border-white/10 mb-6 rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] group-hover:shadow-[0_30px_60px_-15px_rgba(192,38,211,0.15)] transition-all duration-300 overflow-hidden transform-style-3d">
+                    <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none">
+                    </div>
+
+                    <div class="aspect-[4/3] flex items-center justify-center p-12">
+                        <img src="push-logo.svg" alt="Push Protocol Logo"
+                            class="object-contain w-80 h-auto drop-shadow-2xl group-hover:scale-105 translate-x-6 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-start px-2">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-blue-400 transition-colors">Push Protocol
+                            <span class="text-white/60 font-medium text-lg group-hover:text-white/60">- Chicago</span>
+                        </h3>
+                        <p class="text-gray-300 text-sm mb-4 leading-relaxed group-hover:text-white transition-colors">
+                            Drove mainnet launch marketing, scaling app installs from <strong>18K to 100K in 4
+                                months</strong>. Managed a $2M fund application strategy.
+                        </p>
+                        <ul class="flex gap-3 text-xs text-gray-500 uppercase tracking-wider mb-4">
+                            <li>Miro</li>
+                            <li>Planning</li>
+                            <li>Crypto</li>
+                        </ul>
+                    </div>
+                    <!-- Removed the small arrow button since the whole card is now a link -->
+                    <div
+                        class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+                        ↗
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 px-6 max-w-4xl mx-auto border-t border-white/10">
+        <h2 class="text-sm text-gray-500 uppercase tracking-[0.25em] mb-16 reveal">Professional Experience</h2>
+
+        <div class="space-y-16">
+            <!-- Experience Item 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 reveal">
+                <div class="text-gray-500 text-sm">June 2025 - Jan 2026</div>
+                <div class="md:col-span-3">
+                    <h3 class="text-xl font-bold mb-1">Infiniti.AI - GTM Consultant</h3>
+                    <p class="text-sm text-gray-400 mb-4">Worked with Founders Urvi Wadhwa & Deepak Kashyap</p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Launched new AI-based BGV product. Secured initial customers and validated PMF. Built and
+                        identified sales funnels with clear ROI.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 reveal">
+                <div class="text-gray-500 text-sm">Jan 2025 - June 2025</div>
+                <div class="md:col-span-3">
+                    <h3 class="text-xl font-bold mb-1">Crop.photo - GTM Strategy Consultant</h3>
+                    <p class="text-sm text-gray-400 mb-4">Worked closely with CTO Rahul Bhargava & Julie Meredith</p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Executed Shopify app launch. Launched Bulk AI Crop app and led GTM across email, video, and
+                        product. Owned HubSpot/Intercom end-to-end, activating 100K+ leads.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 reveal">
+                <div class="text-gray-500 text-sm">Jan 2024 - Aug 2024</div>
+                <div class="md:col-span-3">
+                    <h3 class="text-xl font-bold mb-1">Zoftware Hub (Dubai) - Marketing & Partnerships</h3>
+                    <p class="text-sm text-gray-400 mb-4">Techstars Backed</p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Built government and accelerator partnerships across MENA for a 150K-member SaaS community.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Experience Item 4 -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 reveal">
+                <div class="text-gray-500 text-sm">Dec 2021 - Mar 2022</div>
+                <div class="md:col-span-3">
+                    <h3 class="text-xl font-bold mb-1">Push Protocol (Singapore) - Marketing Team</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Drove mainnet launch marketing; scaled app installs from 18K to 100K in 4 months.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Skills -->
+    <section id="about" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div class="reveal">
+
+
+                <h2 class="text-sm text-gray-500 uppercase tracking-[0.25em] mb-8">About Me</h2>
+                <p class="text-lg leading-relaxed text-gray-300 mb-6">
+                    National-level footballer (State Captain, CM/CAM) turned Growth Operator. I love scaling products,
+                    analyzing data, and watching "The Diary of a CEO". Currently upskilling in programming with Mimo.
+                </p>
+                <div class="flex items-center gap-4">
+                    <a href="https://www.linkedin.com/in/kaushik-natta-979112212/" target="_blank"
+                        class="text-white hover:text-blue-400 transition-colors underline decoration-1 underline-offset-4">LinkedIn
+                        Profile</a>
+                </div>
+            </div>
+            <div class="reveal">
+                <h2 class="text-sm text-gray-500 uppercase tracking-[0.25em] mb-8">Tool Stack</h2>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">Miro</span>
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">HubSpot</span>
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">Webflow</span>
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">Shopify</span>
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">Google
+                        Antigravity</span>
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">Apollo.io</span>
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">Intercom</span>
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">Google
+                        Analytics 4</span>
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">n8n</span>
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">Make</span>
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">SQL</span>
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">BuiltWith</span>
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">Hunter.io</span>
+                    <span
+                        class="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white hover:text-black transition-colors duration-300 cursor-default">Cognism</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-32 px-6 text-center border-t border-white/10">
+        <h2 class="text-sm text-gray-500 uppercase tracking-[0.25em] mb-8 reveal">Next Steps</h2>
+        <h3 class="text-4xl md:text-6xl font-bold mb-8 reveal">Let's work together.</h3>
+        <div class="flex flex-col md:flex-row gap-6 justify-center items-center mt-10 reveal">
+            <a href="https://calendly.com/nattakaushik/15min" target="_blank"
+                class="inline-block px-10 py-4 border border-white/20 text-white font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 hover:scale-105">
+                Book Consultation
+            </a>
+            <a href="mailto:nattakaushik@gmail.com"
+                class="inline-block px-10 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-gray-200 transition-transform hover:scale-105">
+                Email Me
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-xs text-gray-600 uppercase tracking-widest border-t border-white/5">
+        &copy; 2026 Kaushik Natta. All Rights Reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

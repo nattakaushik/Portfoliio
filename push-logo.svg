@@ -1,0 +1,33 @@
+<svg width="450" height="150" viewBox="0 0 450 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(10, 10)">
+        <defs>
+            <linearGradient id="bellGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#d946ef" /> 
+                <stop offset="100%" stop-color="#8b5cf6" /> 
+            </linearGradient>
+            <linearGradient id="bellGrad2" x1="60" y1="20" x2="60" y2="120" gradientUnits="userSpaceOnUse">
+                 <stop offset="0%" stop-color="#fab8ff" /> 
+                 <stop offset="50%" stop-color="#d946ef" /> 
+                 <stop offset="100%" stop-color="#7c3aed" /> 
+            </linearGradient>
+        </defs>
+        
+        <!-- Bell Body -->
+        <path d="M60 20 C38 20 25 38 25 65 V80 C25 80 15 88 15 92 C15 95 18 96 22 96 H98 C102 96 105 95 105 92 C105 88 95 80 95 80 V65 C95 38 82 20 60 20 Z" fill="url(#bellGrad2)"/>
+        
+        <!-- Clapper -->
+        <path d="M45 104 C45 104 48 116 60 116 C72 116 75 104 75 104 H45 Z" fill="url(#bellGrad2)"/>
+        
+        <!-- Waves -->
+        <path d="M 20 40 A 35 35 0 0 1 35 15" stroke="url(#bellGrad2)" stroke-width="7" stroke-linecap="round" />
+        <path d="M 8 30 A 50 50 0 0 1 25 5" stroke="url(#bellGrad2)" stroke-width="7" stroke-linecap="round" />
+        <path d="M 100 40 A 35 35 0 0 0 85 15" stroke="url(#bellGrad2)" stroke-width="7" stroke-linecap="round" />
+        <path d="M 112 30 A 50 50 0 0 0 95 5" stroke="url(#bellGrad2)" stroke-width="7" stroke-linecap="round" />
+
+    </g>
+
+    <!-- Text -->
+    <!-- Perfectly aligned start at x=145 -->
+    <text x="145" y="80" font-family="'Inter', sans-serif" font-weight="700" font-size="80" fill="#ffffff" letter-spacing="-2">Push</text>
+    <text x="145" y="120" font-family="'Inter', sans-serif" font-weight="500" font-size="28" fill="#ffffff" letter-spacing="8">PROTOCOL</text>
+</svg>

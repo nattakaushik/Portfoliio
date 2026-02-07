@@ -1,0 +1,35 @@
+<svg width="450" height="100" viewBox="0 0 450 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(10, 15)">
+        <!-- Blue Rounded Square Outline -->
+        <defs>
+            <linearGradient id="blueGradient" x1="0" y1="0" x2="70" y2="70" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#3b82f6" />
+                <stop offset="100%" stop-color="#6366f1" />
+            </linearGradient>
+            <linearGradient id="orangeGradient" x1="30" y1="30" x2="70" y2="70" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#f97316" /> <!-- Orange -->
+                <stop offset="100%" stop-color="#db2777" /> <!-- Pink -->
+            </linearGradient>
+        </defs>
+
+        <!-- The Blue Square (Stroke) - using a path to allow the gap -->
+        <!-- Rounded square 60x60 -->
+        <path d="M 20 60 A 12 12 0 0 1 8 48 L 8 20 A 12 12 0 0 1 20 8 L 48 8 A 12 12 0 0 1 60 20 L 60 40" 
+              stroke="url(#blueGradient)" 
+              stroke-width="8" 
+              stroke-linecap="round" 
+              fill="none" />
+              
+        <!-- The Orange Gradient Cursor/Arrow -->
+        <!-- Points up-leftish, bottom right of the square -->
+        <g transform="translate(32, 32)">
+            <path d="M 0 0 L 26 8 L 16 16 L 8 26 Z" fill="url(#orangeGradient)" stroke="none" transform="rotate(-15 13 13)"/>
+        </g>
+    </g>
+
+    <!-- Text -->
+    <!-- Increased size from 52 to 64. Adjusted position slightly. -->
+    <text x="90" y="66" font-family="'Inter', sans-serif" font-weight="700" font-size="64" fill="#000000" letter-spacing="-2">crop.photo</text>
+    <!-- Increased size from 24 to 30. Adjusted x position. -->
+    <text x="415" y="40" font-family="'Inter', sans-serif" font-weight="500" font-size="30" fill="#000000">ai</text>
+</svg>
